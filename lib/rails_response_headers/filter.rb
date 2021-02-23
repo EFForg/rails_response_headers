@@ -5,7 +5,7 @@ module RailsResponseHeaders
     included do
       cattr_accessor :rails_response_headers
 
-      before_filter :set_rails_response_headers
+      before_action :set_rails_response_headers
     end
 
     class_methods do
