@@ -12,7 +12,7 @@ module RailsResponseHeaders
       def load_rails_response_headers
         config_file = Rails.application.config.response_headers.config
 
-        if File.exists?(config_file)
+        if File.exist?(config_file)
           self.rails_response_headers = YAML.load_file(config_file)
         else
           self.rails_response_headers = {}
